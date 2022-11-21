@@ -1,0 +1,245 @@
+/* . for calling class name (dot notation)
+
+# for calling id name in css (hash notation) */
+
+/* pixel (px) */
+
+/* selector 
+{
+    & declaration block (properties & value)
+} */
+
+/* Global reset  */
+/* universal selector */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* KISS => KEEP IT SIMPLE STUPID */
+/* YAGNI => You arent gonna need it  */
+
+body {
+  width: 100%;
+  border-right: 200px;
+
+  font-family: sans-serif;
+  color: #444;
+  line-height: 1.6;
+  border-top: 6px solid #4399ad;
+}
+.whole {
+  width: 700px;
+  margin: 0 auto;
+}
+.main-header {
+  background-color: #f7f7f7;
+  width: 680px;
+  height: 80px;
+  padding: 0 40px;
+  margin: 0 auto 50px;
+}
+
+.main-header h1 {
+  font-size: 22px;
+  padding-top: 20px;
+  font-weight: 700;
+  font-style: italic;
+  color: #4399ad;
+  text-transform: uppercase;
+}
+/* Using psuedo element  */
+
+.main-header h1::first-letter {
+  display: inline-block;
+  font-style: normal;
+  margin-right: 5px;
+}
+
+.main-header nav a {
+  margin-right: 18px;
+}
+
+.main-header nav a:link,
+.main-header nav a:visited {
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #4399ad;
+}
+
+.main-header nav a:hover {
+  color: rgb(255, 69, 0);
+  font-weight: 700;
+  text-decoration: underline;
+}
+.main-header nav a:active {
+  background-color: black;
+}
+header h2 {
+  color: #4399ad;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+.img {
+  width: 100%;
+}
+.post {
+  width: 35px;
+  height: 35px;
+}
+p {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+.blog-text {
+  font-style: italic;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.code-img {
+  width: 540px;
+  height: 220px;
+  margin-bottom: 40px;
+}
+h3 {
+  color: #4399ad;
+  margin-bottom: 14px;
+}
+ul,
+ol {
+  margin-left: 32px;
+  font-size: 16px;
+}
+/* li:nth-child(odd) {
+  font-weight: bold;
+} */
+
+li:first-child {
+  font-weight: bold;
+}
+li:last-child {
+  font-style: italic;
+}
+.learn-more:link,
+.learn-more:visited {
+  color: #4399ad;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+.learn-more:hover {
+  color: rgb(255, 69, 0);
+  font-weight: 700;
+  text-decoration: underline;
+}
+.post-section {
+  margin-top: 40px;
+  background-color: #f7f7f7;
+  width: 350px;
+  border-top: 3px solid #4399ad;
+  border-bottom: 3px solid #4399ad;
+}
+.related-list {
+  list-style: none;
+}
+.related-img {
+  width: 50px;
+  height: 50px;
+}
+.post-section h4 {
+  margin-top: 30px;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.post-section p {
+  font-size: 14px;
+  font-weight: bold;
+}
+footer {
+  font-size: 14px;
+}
+button {
+  padding: 10px;
+  font-size: 16px;
+}
+button:first-letter {
+  /* color: red;
+  font-size: 20px; */
+}
+li::marker {
+  color: #4399ad;
+}
+
+/* CSS Positioning */
+/* position: relative
+           absolute
+           static
+           sticky
+           fixed
+
+top
+bottom
+left
+right */
+
+/* out of flow */
+
+/* paraent element should always have position of relative value */
+/* Child absolute position */
+body {
+  position: relative;
+}
+button {
+  position: absolute;
+  right: 40px;
+  bottom: 50px;
+}
+.out-flow {
+  position: relative;
+}
+/* .element {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background-color: #ffe733;
+  padding: 2px 6px;
+  color: #444;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+} */
+
+/* using psuedo element  */
+h2::before {
+  content: "top";
+  text-transform: uppercase;
+  background-color: #ffe733;
+  color: #444;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 2px 6px;
+  position: absolute;
+  right: -8px;
+  top: -8px;
+}
+.main-header {
+  position: relative;
+}
+
+/* .fixed-nav {
+  position: fixed;
+  top: 0;
+  background-color: #f7f7f7;
+  width: 530px;
+  height: 80px;
+  padding: 0 40px;
+  border-top: 6px solid #4399ad;
+  border-radius: 8px;
+} */
+/* .img {
+  border-radius: 50%;
+} */
